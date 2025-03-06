@@ -46,6 +46,15 @@ function operate(operator, a, b){
     }
 }
 
+function updateDisplay(value){
+    if (shouldResetDisplay){
+        display.textContent = value
+        shouldResetDisplay = false
+    } else {
+        display.textContent = display.textContent === "0" ? value: display.textContent + value
+    }
+}
+
 numberButton.forEach(button => {
     button.addEventListener("click" , () => {
         updateDisplay(button.dataset.number)
