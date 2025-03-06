@@ -78,3 +78,13 @@ operatorButton.forEach(button => {
         shouldResetDisplay = true
     })
 })
+
+equalButton.addEventListener("click" , () => {
+    if (operator && secondNumber){
+        display.textContent = operate(operator, firstNumber, secondNumber)
+        firstNumber = display.textContent
+        secondNumber = ""
+        operator = ""
+        shouldResetDisplay = true
+    }
+})
