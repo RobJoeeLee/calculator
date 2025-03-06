@@ -65,3 +65,16 @@ numberButton.forEach(button => {
         }
     } )
 })
+
+operatorButton.forEach(button => {
+    button.addEventListener("click" , () => {
+        if (operator && secondNumber){
+            firstNumber = operate(operator, firstNumber, secondNumber)
+            display.textContent = firstNumber
+            secondNumber = ""
+        }
+
+        operator = button.dataset.operator
+        shouldResetDisplay = true
+    })
+})
