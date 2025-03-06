@@ -7,6 +7,7 @@ const display = document.querySelector(".display")
 let firstNumber = ""
 let secondNumber = ""
 let operator = ""
+let shouldResetDisplay = false
 
 function add(a, b){
     return a + b
