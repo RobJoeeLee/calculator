@@ -45,3 +45,14 @@ function operate(operator, a, b){
             return null
     }
 }
+
+numberButton.forEach(button => {
+    button.addEventListener("click" , () => {
+        updateDisplay(button.dataset.number)
+        if(!operator){
+            firstNumber = button.dataset.number
+        } else {
+            secondNumber = button.dataset.number
+        }
+    } )
+})
