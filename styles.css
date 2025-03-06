@@ -14,6 +14,8 @@ body {
     border-radius: 10px;
     background: rgb(61, 134, 245);
     padding: 20px;
+    width: 300px;
+    max-width: 300px;
 
 }
 
@@ -25,6 +27,12 @@ body {
     font-size: 3em;
     padding: 10px;
     border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
 }
 
 .buttons {
@@ -41,6 +49,7 @@ button {
     border-radius: 10px;
     outline: none;
     border: none;
+    width: 100%;
 }
 
 .operator {
