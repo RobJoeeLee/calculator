@@ -22,8 +22,8 @@ function multiply(a, b){
 }
 
 function divide(a, b){
-    if (b === "0"){
-        return "Error: Can't divide by 0!"
+    if (b === 0){
+        return "Error"
     }
     return a / b
 }
@@ -59,9 +59,9 @@ numberButton.forEach(button => {
     button.addEventListener("click" , () => {
         updateDisplay(button.dataset.number)
         if(!operator){
-            firstNumber = button.dataset.number
+            firstNumber += button.dataset.number
         } else {
-            secondNumber = button.dataset.number
+            secondNumber += button.dataset.number
         }
     } )
 })
@@ -93,5 +93,6 @@ clearButton.addEventListener("click" , () => {
     firstNumber = ""
     secondNumber = ""
     operator = ""
+    shouldResetDisplay = false
     display.textContent = "0"
 })
